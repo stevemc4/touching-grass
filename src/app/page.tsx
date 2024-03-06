@@ -14,7 +14,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Touching Grass',
-    url: 'https://touching-grass.dhikarizky.me'
+    url: 'https://touching-grass.dhikarizky.me',
+    description: 'Waktunya Menyentuh Rumput',
+    type: 'website'
   }
 }
 
