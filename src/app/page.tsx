@@ -7,6 +7,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Touching Grass',
   description: 'Waktunya Menyentuh Rumput',
+  metadataBase: new URL('https://touching-grass.dhikarizky.me'),
   authors: {
     name: 'Dhika Rizky',
     url: 'https://dhikarizky.me'
