@@ -23,7 +23,7 @@ export default async function Index () {
     <main>
       {groupedImages.map(([key, images]) => (
         <div key={key}>
-          <span className="block after:content-['—_'] after:font-medium md:after:content-none col-span-3 md:text-center text-2xl font-black mt-2">{key}</span>
+          <span className="block after:content-['_—'] after:font-medium md:after:content-none col-span-3 md:text-center text-2xl font-black mt-2">{key}</span>
           <div className="grid md:grid-cols-3 gap-4 mt-2 md:mt-8">
             {images.map(image => (
               <div key={image.uid} className="bg-[#c3dda4] rounded-lg overflow-hidden">
