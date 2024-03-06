@@ -16,7 +16,6 @@ export default function Layout ({ children }: { children: ReactElement }) {
     <head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Touching Grass</title>
     </head>
     <body className={`${plusJakartaSans.className} font-medium bg-[#E6F1E1] text-[#5B8F21] grid md:grid-cols-[320px_minmax(0,_1fr)] md:py-10 md:px-12 gap-4`}>
       <div className="sticky top-0 mt-12 md:mt-0 z-10">

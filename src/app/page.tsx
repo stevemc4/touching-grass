@@ -2,6 +2,22 @@ import { ImageField } from '@prismicio/client'
 import { createClient } from '../prismicio'
 import { PrismicNextImage } from '@prismicio/next'
 import { groupByTags } from '../utils'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Touching Grass',
+  description: 'Waktunya Menyentuh Rumput',
+  authors: {
+    name: 'Dhika Rizky',
+    url: 'https://dhikarizky.me'
+  },
+  openGraph: {
+    title: 'Touching Grass',
+    url: 'https://touching-grass.dhikarizky.me'
+  }
+}
+
+export const revalidate = 3600
 
 export default async function Index () {
   const client = createClient()
