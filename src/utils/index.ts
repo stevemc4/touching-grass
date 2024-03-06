@@ -7,7 +7,6 @@ export function groupByTags (tagToGroup: TypedTags, documents: AllDocumentTypes[
   for (const document of documents) {
     const currentTag = document.tags.filter(tag => tag.startsWith(`${tagToGroup}:`))
     if (currentTag.length === 0) {
-      returnValue.untagged.push(document)
       continue
     }
 
