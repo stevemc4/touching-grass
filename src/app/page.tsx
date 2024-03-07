@@ -53,7 +53,8 @@ export default async function Index () {
                   <PrismicNextImage
                     alt=""
                     field={image.data.image}
-                    imgixParams={{ q: 75, cs: 'srgb', ar: '4:3', fit: 'crop', crop: ['focalpoint', 'entropy'] }}
+                    width={720}
+                    imgixParams={{ q: 75, cs: 'srgb', w: 720, ar: '4:3', fit: 'crop', crop: ['focalpoint', 'entropy'] }}
                     className="transition-y-0 relative w-full h-auto object-cover aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group-hover:-translate-y-10 group-hover:drop-shadow-2xl opacity-100 transition-[filter,_transform,_opacity] group peer-checked:opacity-0 peer-checked:translate-y-full duration-200"
                   />
 
@@ -65,7 +66,8 @@ export default async function Index () {
                   <PrismicNextImage
                     alt=""
                     field={image.data.image}
-                    imgixParams={{ q: 75, cs: 'srgb', ar: `${image.data.image.dimensions?.width ?? 0}:${image.data.image.dimensions?.height ?? 0}`, fit: 'crop' }}
+                    width={3860}
+                    imgixParams={{ q: 75, cs: 'srgb', ar: `${image.data.image.dimensions?.width ?? 0}:${image.data.image.dimensions?.height ?? 0}`, fit: 'crop', maxW: 3860 }}
                     className={`${getCheckedAspectRatioClass(image.data.image)} md:rounded-t-xl object-cover`}
                   />
                   <div className="p-4 bg-[#E6F1E1] md:rounded-b-xl flex-1 md:flex-0">
