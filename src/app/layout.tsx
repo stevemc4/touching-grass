@@ -2,6 +2,7 @@ import { ReactElement } from 'react'
 // eslint-disable-next-line camelcase
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import '../styles/global.css'
+import { Metadata } from 'next'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: 'variable',
@@ -9,6 +10,22 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   fallback: ['system-ui', 'arial'],
   subsets: ['latin']
 })
+
+export const metadata: Metadata = {
+  title: 'Touching Grass',
+  description: 'Waktunya Menyentuh Rumput',
+  metadataBase: new URL('https://touching-grass.dhikarizky.me'),
+  authors: {
+    name: 'Dhika Rizky',
+    url: 'https://dhikarizky.me'
+  },
+  openGraph: {
+    title: 'Touching Grass',
+    url: 'https://touching-grass.dhikarizky.me',
+    description: 'Waktunya Menyentuh Rumput',
+    type: 'website'
+  }
+}
 
 export default function Layout ({ children }: { children: ReactElement }) {
   return (

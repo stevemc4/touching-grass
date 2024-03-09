@@ -1,6 +1,8 @@
 import { AllDocumentTypes } from '../../prismicio-types'
 
-type TypedTags = 'country' | 'city' | 'year'
+export const TYPED_TAGS = ['city', 'country', 'year'] as const
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type TypedTags = typeof TYPED_TAGS[number]
 
 export function groupByTags (tagToGroup: TypedTags, documents: AllDocumentTypes[]) {
   const returnValue: Record<string, AllDocumentTypes[]> = {}

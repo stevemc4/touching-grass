@@ -2,23 +2,7 @@ import { ImageField } from '@prismicio/client'
 import { createClient } from '../prismicio'
 import { PrismicNextImage } from '@prismicio/next'
 import { groupByTags } from '../utils'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Touching Grass',
-  description: 'Waktunya Menyentuh Rumput',
-  metadataBase: new URL('https://touching-grass.dhikarizky.me'),
-  authors: {
-    name: 'Dhika Rizky',
-    url: 'https://dhikarizky.me'
-  },
-  openGraph: {
-    title: 'Touching Grass',
-    url: 'https://touching-grass.dhikarizky.me',
-    description: 'Waktunya Menyentuh Rumput',
-    type: 'website'
-  }
-}
+import Tag from '../components/tag'
 
 export const revalidate = 3600
 
@@ -72,11 +56,9 @@ export default async function Index () {
                   />
                   <div className="p-4 bg-[#E6F1E1] md:rounded-b-xl flex-1 md:flex-0">
                     <h1 className="font-bold text-xl">{image.data.title}</h1>
-                    <ul className="flex gap-1 items-center mt-2">
+                    <ul className="flex gap-1.5 items-center mt-2">
                       {image.tags.map(tag => (
-                        <li key={`${image.uid}-${tag}`} className="rounded p-2 bg-[#5B8F21] text-[#E6F1E1] leading-none text-sm">
-                          {tag}
-                        </li>
+                        <Tag key={`${image.uid}-${tag}`}>{tag}</Tag>
                       ))}
                     </ul>
                   </div>
