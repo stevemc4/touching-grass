@@ -39,7 +39,7 @@ export default async function Index () {
                     field={image.data.image}
                     width={720}
                     imgixParams={{ q: 75, cs: 'srgb', w: 720, ar: '4:3', fit: 'crop', crop: ['focalpoint', 'entropy'] }}
-                    className="transition-y-0 relative w-full h-auto object-cover aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group-hover:-translate-y-10 group-hover:drop-shadow-2xl opacity-100 transition-[filter,_transform,_opacity] group peer-checked:opacity-0 peer-checked:translate-y-full duration-200"
+                    className="transition-y-0 relative w-full h-auto object-cover aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group-hover:-translate-y-10 group-hover:drop-shadow-2xl opacity-100 transition-[filter,_transform,_opacity] group peer-checked:opacity-0 peer-checked:translate-y-full duration-200 delay-150 hover:delay-0"
                   />
 
                 </label>
