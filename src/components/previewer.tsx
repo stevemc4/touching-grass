@@ -56,7 +56,7 @@ export default function Previewer () {
           alt=""
           field={image?.data.image}
           width={3860}
-          imgixParams={{ q: 75, cs: 'srgb', ar: `${image?.data.image.dimensions?.width ?? 0}:${image?.data.image.dimensions?.height ?? 0}`, fit: 'crop', maxW: 3860 }}
+          imgixParams={{ q: 60, cs: 'srgb', ar: `${image?.data.image.dimensions?.width ?? 0}:${image?.data.image.dimensions?.height ?? 0}`, fit: 'crop', maxW: 3860 }}
           className={`${getAspectRatioClass(image?.data.image)} md:rounded-t-xl object-cover`}
         />
         <div className="p-4 flex-1 md:flex-0">
